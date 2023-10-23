@@ -24,5 +24,5 @@ streamlit.dataframe(my_data_rows)
 fruits_selected1 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 fruits_to_show1 = my_fruit_list.loc[fruits_selected1]
 streamlit.dataframe(fruits_to_show1)
-streamlit.write('Thanks for adding',add_my_fruit)
+streamlit.write('Thanks for adding',fruits_to_show1)
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
